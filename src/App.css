@@ -1,38 +1,94 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Bonheur+Royale&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Play&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Anek+Devanagari:wght@100&family=Hind+Vadodara:wght@400;500&family=Merienda&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Athiti:wght@200;300&family=Cinzel:wght@400;500;600&display=swap');
+
+body {
+  background-color: #e3e6e9be;
+  padding: 0;
+  font-family: 'Athiti', sans-serif;
+font-weight: 300;
+  
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.font1 {
+  font-family: 'Alata', sans-serif;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.font2 {
+  font-family: 'Anek Devanagari', sans-serif;
 }
+.font3 {
+  font-family: 'Hind Vadodara', sans-serif;
+}
+.font4{
+  font-family: 'Playfair Display', serif;
+}
+.font5{
+  font-family: 'Cinzel', serif;
+}
+.font6{
+  font-family: 'Athiti', sans-serif;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+}
+.inner1 {
+  border-radius: 25px;
+  background-color: #dde1e7;
+  box-shadow: -5px -5px 10px #ffffff73, 5px 5px 10px rgba(94, 104, 121, 0.288);
+
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(212, 212, 212),
+    rgba(243, 240, 240, 0.644)
+  );
+}
+.inner2 {
+  border-radius: 25px;
+  background-color: #dde1e7;
+  box-shadow: -5px -5px 10px #ffffff73,
+    inset 5px 5px 10px rgba(94, 104, 121, 0.288);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(212, 212, 212),
+    rgba(243, 240, 240, 0.644)
+  );
+}
+.inner3 {
+  border-radius: 25px;
+  background-color: #dde1e7;
+  box-shadow: -5px -5px 10px #ffffff73, 5px 5px 10px rgba(94, 104, 121, 0.288),inset -5px -5px 10px #1d1a5854 ,inset 5px 5px 10px #ffffff73;
+
+  /* display: flex; */
+  align-items: center;
+  /* justify-content: space-between; */
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(212, 212, 212),
+    rgba(243, 240, 240, 0.644)
+  );
 }
 
-.App-link {
-  color: #61dafb;
-}
+.inner4 {
+  border-radius: 25px;
+  background-color: #dde1e7;
+  box-shadow: -5px -5px 10px #ffffff73, 5px 5px 10px #322ea05e;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(212, 212, 212),
+    rgba(243, 240, 240, 0.644)
+  );
 }
