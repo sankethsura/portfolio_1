@@ -20,7 +20,7 @@ const Projects = (props) => {
 
            
         </div>
-        <div className="flex justify-center items-center md:items-start flex-col pt-7 md:pt-0 xl:-translate-x-[5rem]">
+        <div onClick={() => window.open(props.url)} className="flex justify-center items-center md:items-start flex-col pt-7 md:pt-0 xl:-translate-x-[5rem]">
           <p className="font-bold font4 text-[30px] lg:text-[28px]"># {props.number}</p>
           <p className="font4 font-bold lg:text-[28px]"> {props.name}</p>
           <p className="font6 text-sm lg:text-[15px]"> {props.used}</p>

@@ -3,7 +3,7 @@ import { useRef } from "react";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "./firebase";
 import { useNavigate } from "react-router";
-const ContactForm = () => {
+const ContactForm = ({setPopUp}) => {
   const EmailRef = useRef();
   const nameRef = useRef();
   const contactRef = useRef();
@@ -38,6 +38,7 @@ const ContactForm = () => {
 
   function handleClick() {
     formFunc();
+    setPopUp(false)
   }
   return (
     <div className="w-[80vw]  max-w-[600px] inner3 m-auto mt-10">
@@ -55,31 +56,31 @@ const ContactForm = () => {
           <section className="my-2">
             <span>Name :</span>
             <div>
-              <input className="inner1 px-4 w-[68vw] max-w-[450px] py-[2px] focus:outline-none caret-neutral-100 " ref={EmailRef} />
+              <input type="text" className="inner1 px-4 w-[68vw] max-w-[450px] py-[2px] focus:outline-none caret-neutral-100 " ref={EmailRef} />
             </div>
           </section>
           <section className="my-2">
             <span>Email :</span>
             <div>
-              <input className="inner1 px-4 w-[68vw]  max-w-[450px] py-[2px] focus:outline-none caret-neutral-100" ref={nameRef} />
+              <input type="email" className="inner1 px-4 w-[68vw]  max-w-[450px] py-[2px] focus:outline-none caret-neutral-100" ref={nameRef} />
             </div>
           </section>
           <section className="my-2">
             <span>Contact No :</span>
             <div>
-              <input className="inner1 px-4 w-[68vw]  max-w-[450px] py-[2px] focus:outline-none caret-neutral-100" ref={contactRef} />
+              <input type="number" className="inner1 px-4 w-[68vw]  max-w-[450px] py-[2px] focus:outline-none caret-neutral-100" ref={contactRef} />
             </div>
           </section>
           <section className="my-2">
             <span>Company Name :</span>
             <div>
-              <input className="inner1 px-4 w-[68vw]  max-w-[450px] py-[2px] focus:outline-none caret-neutral-100" ref={companyRef} />
+              <input type="text" className="inner1 px-4 w-[68vw]  max-w-[450px] py-[2px] focus:outline-none caret-neutral-100" ref={companyRef} />
             </div>
           </section>
           <section className="my-2">
             <span>Description :</span>
             <div>
-                <textarea className="inner1 pb-12 px-4 w-[68vw]  max-w-[450px] py-[2px] focus:outline-none caret-neutral-100" ref={descriptionRef}>
+                <textarea type="text" className="inner1 pb-12 px-4 w-[68vw]  max-w-[450px] py-[2px] focus:outline-none caret-neutral-100" ref={descriptionRef}>
 
                 </textarea>
               {/* <input  /> */}
@@ -95,7 +96,8 @@ const ContactForm = () => {
         </button>
         <button
           className="py-1 hover:scale-110 duration-300 flex items-center font-semibold text-sm text-purple-900"
-          onClick={()=>{navHome("/")}}
+          onClick={()=>{navHome("/")
+        setPopUp(false)}}
         >
           back to HOME!!!
         </button>

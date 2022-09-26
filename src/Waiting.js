@@ -11,7 +11,9 @@ const Waiting = () => {
           />
       </div>
       <div className="flex justify-center items-center text-center flex-col ">
-        Hi, It's been a while since you are here ,feel free to <span className="text-purple-900 font-semibold font4">CONTACT ME</span>
+        looks like my portfolio is interesting!!!! 
+        <img alt="" className="w-[250px] h-[250px] object-cover" src="https://media4.giphy.com/media/Wsv2wmCbMGuTz0ljKY/200.gif"/>
+        <span className="text-purple-900 font-semibold font4">CONTACT ME</span>
       </div>
           </div>
     </div>

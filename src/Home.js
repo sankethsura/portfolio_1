@@ -2,6 +2,7 @@ import "./App.css";
 import React from "react";
 import { RiContactsFill } from "react-icons/ri";
 import { BsArrowUpCircleFill } from "react-icons/bs";
+import { IoDocumentTextSharp } from "react-icons/io5";
 // import Waiting from "./Waiting";
 import FrontPage from "./FrontPage";
 import Page2 from "./page2_about";
@@ -11,28 +12,33 @@ import { useNavigate } from "react-router";
 import { useEffect } from "react";
 // import { useState } from "react";
 
-function Home() {
+function Home({popUp}) {
   const nav = useNavigate();
-  useEffect(() => {
+
+
+useEffect(() => {
+    if(popUp){
     setTimeout(() => {
       nav("waiting");
     }, 176000);
     setTimeout(() => {
       nav("contactform");
     }, 180000);
-  }, [nav]);
+  }
+  }, [nav,popUp]);
 
   return (
     <div className="App">
       <div className="w-[100vw] flex items-center justify-around md:justify-center mx-auto h-[60px] mt-4 fixed z-50">
         <div className="w-[100vw] h-[90px]  fixed -z-10 backdrop-blur-sm "></div>
         <div
-          // onClick={() => {
-          //   nav("waiting");
-          // }}
-          className="w-[60px] h-[60px] inner3 mx-4 font5 text-[25px] items-center justify-center flex pt-1 hover:scale-110 duration-300 cursor-default"
+          onClick={() => {
+            nav("waiting");
+          }}
+          className="w-[60px] h-[60px] inner3 mx-4 font5 text-[25px] items-center justify-center flex  hover:scale-110 duration-300 cursor-default"
         >
-          S
+          
+          <IoDocumentTextSharp />
         </div>
 
         <section className="inner3 h-[60px] md:w-[60vw] w-[60px]  mx-4 flex justify-center hover:scale-110 duration-300 md:hover:scale-100">
@@ -95,7 +101,7 @@ function Home() {
         <Page2 />
       </div>
       <div className=" w-[80vw] m-auto">
-        <Contact />
+        <Contact/>
       </div>
       <div>
         <div className="flex justify-center font4  text-[36px] py-8">
